@@ -1,19 +1,20 @@
 let nombreHeureTotale = prompt("Combien d'heures travaillées?");
 let nombreHeureDimanche = prompt("Dont combien d'heure de dimanche?");
 
+
 let salaireDeBaseMensualise =  11.07 * 151.67; 
-console.log (salaireDeBaseMensualise);
-let entreeSortie = (151.67-(nombreHeureTotale)) * 12.639;
-console.log (entreeSortie);
-let salaireBase = salaireDeBaseMensualise - entreeSortie;
-console.log (salaireBase);
+let absencePourEntreeSortie = (151.67-(nombreHeureTotale)) * 12.6392;
+let salaireBase = salaireDeBaseMensualise - absencePourEntreeSortie;
+let indemniteSujetionSpeciale =(nombreHeureTotale*10.80545)*0.0921 ;
+let revalorisationSegur = 238;
+let majoDimanche = nombreHeureDimanche * 7.64; 
+//FIN DE CONTRAT
+let indemnitePrecarite = (salaireBase+indemniteSujetionSpeciale+revalorisationSegur+majoDimanche)*10/100;
+console.log (indemnitePrecarite);
+let indemniteCongesPayes = (salaireBase+indemniteSujetionSpeciale+revalorisationSegur+majoDimanche+indemnitePrecarite) *10/100;
 
-let primeSegur = 238;
-let indemniteSujetion = nombreHeureDimanche * 3.84; 
-let indemniteCongesPayes = nombreHeureTotale * 3.49;
-let PrimeDimanche = nombreHeureDimanche * 7.64; 
 
-let salaireBrut = salaireBase + primeSegur + indemniteCongesPayes + indemniteSujetion + PrimeDimanche;
-let salaireNet = salaireBrut * 0.71;
+let salaireBrut = salaireBase + revalorisationSegur + indemniteSujetionSpeciale + majoDimanche + indemnitePrecarite + indemniteCongesPayes;
+let salaireNet = salaireBrut / 1.309;
 
 alert("Ton salaire sera de " +salaireNet+ " €")
