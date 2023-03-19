@@ -1,14 +1,24 @@
-body{
+body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    width: 100%;
-    margin: auto;
-};
-
-.entete {
-    display: flex;
-    flex-direction: row;
 }
 
-#logo {
-    width: 25%;
+#container {
+    width: 80%;
+    max-width: 1000px;
+    margin : 0 auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: url(images/logo.png) no-repeat center ; 
+    
+}
+
+input {
+    width: 70px;
+}
+
+#resultat {
+    width: 100px;
+}
+
+h1, h2, p {
+    text-align: center;
 }

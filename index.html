@@ -8,28 +8,29 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="entete">
-        <h1><img src="images/logo.jpg" class="img-flex" id="logo" alt="logo">
-        Vacation Tamaris</h1>
-    </div>
-    <div class="input-container">
-        <h2>Calcul salaire</h2>
-        <form>
-            <div class="input-group">
-                <p><label>Nombre d'heures travaillées</label>
+    <div id="container">
+        <div class="entete">
+            <h1>Vacation Tamaris</h1>
+        </div>
+        <div class="input-container">
+            <h2>Calcul salaire</h2>
+            <form>
+                <div class="input-group">
+                    <p><label>Nombre d'heures travaillées</label>
                     <input type="number" name="heureTotale" id="heureTotale"/></p>
                     
-                    <p><label>Nombre d'heure de dimanche</label>
+                    <p><label>Nombre d'heures de dimanche</label>
                     <input type="number" name="heureDimanche" id="heureDimanche"/></p>
                     
                     <p><input type="submit" name="Valider" id="calcul" value="Calculer"></p>
 
-                    <p><form name="resultat">
-                        <p>Résultat : <input type="number" name="valeur_data"></p>
-                    </form></p>
+                    <form name="resultat">
+                        <p>Résultat : <input type="number" id="resultat" name="valeur_data"></p>
+                    </form>
                 </div>
             </form> 
-        </div>
-        <script src="calcul.js"></script> 
+    </div>
+    </div>
+        <script src="calcul.js"></script>
 </body>
 </html>
