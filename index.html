@@ -7,34 +7,25 @@
     <title>Calcul Tamaris</title>
 </head>
 <body>
-    <script src="calcul.js"></script> 
-        <!--<div class="container">
-            <h1>Calcul salaire vacation</h1>
+    <h1>Vacation Tamaris</h1>
+        <div class="input-container">
+            <h2>Calcul salaire</h2>
             <form>
-                <div class="inputs-container">
-                    <div class="input-group">
-                        <label for ="HeureTotale">Nombre d'heures travaillées</label>
-                        <input 
-                        id="HeureTotale"
-                        type="number"
-                        class="HeureTotale-input"
-                        />
-                    </div>
-                    <div class="input-group">
-                        <label for ="HeureDimanche">Nombre d'heure de dimanche</label>
-                        <input 
-                        id="weight"
-                        type="number"
-                        class="weight-input"
-                        />
-                    </div>
+                <div class="input-group">
+                    <p><label>Nombre d'heures travaillées</label>
+                    <input type="number" name="heureTotale" id="heureTotale"/></p>
+                    
+                    <p><label>Nombre d'heure de dimanche</label>
+                    <input type="number" name="heureDimanche" id="heureDimanche"/></p>
+                    
+                    <p><input type="submit" name="Valider" id="calcul" value="Calculer"></p>
+
+                    <p><form name="resultat">
+                        <p>Résultat : <input type="number" name="valeur_data"></p>
+                    </form></p>
                 </div>
-                <button>Calculer</button>
-            </form>
-            <div class="info">
-                <p class="bmi-value">0</p>
-                <p class="result">En attente du résultat...</p>
-            </div>
-        </div>-->
+            </form> 
+        </div>
+        <script src="calcul.js"></script> 
 </body>
 </html>

@@ -1,20 +1,21 @@
-let nombreHeureTotale = prompt("Combien d'heures travaillées?");
-let nombreHeureDimanche = prompt("Dont combien d'heure de dimanche?");
 
+document.getElementById("calcul").addEventListener('click', function() {
+let 
+    nombreHeureTotale = document.getElementById("heureTotale").value,
+    nombreHeureDimanche = document.getElementById("heureDimanche").value,
+    salaireDeBaseMensualise =  11.27 * 151.67,
+    absencePourEntreeSortie = (151.67-(nombreHeureTotale)) * 12.8400,
+    salaireBase = salaireDeBaseMensualise - absencePourEntreeSortie,
+    indemniteSujetionSpeciale =(nombreHeureTotale*10.80545)*0.0921,
+    majoDimanche = nombreHeureDimanche * 7.86,
+    indemnitePrecarite = (salaireBase+indemniteSujetionSpeciale+238+majoDimanche)*10/100,
+    indemniteCongesPayes = (salaireBase+indemniteSujetionSpeciale+238+majoDimanche+indemnitePrecarite) *10/100,
+    salaireBrut = salaireBase + 238 + indemniteSujetionSpeciale + majoDimanche + indemnitePrecarite + indemniteCongesPayes,
 
-let salaireDeBaseMensualise =  11.27 * 151.67; 
-let absencePourEntreeSortie = (151.67-(nombreHeureTotale)) * 12.8400;
-let salaireBase = salaireDeBaseMensualise - absencePourEntreeSortie;
-let indemniteSujetionSpeciale =(nombreHeureTotale*10.80545)*0.0921 ;
-let revalorisationSegur = 238;
-let majoDimanche = nombreHeureDimanche * 7.86; 
-//FIN DE CONTRAT
-let indemnitePrecarite = (salaireBase+indemniteSujetionSpeciale+revalorisationSegur+majoDimanche)*10/100;
-console.log (indemnitePrecarite);
-let indemniteCongesPayes = (salaireBase+indemniteSujetionSpeciale+revalorisationSegur+majoDimanche+indemnitePrecarite) *10/100;
+    salaireNet = document.querySelector('input[name="valeur_data"]');
 
+salaireNet.value = salaireBrut/ 1.309;
 
-let salaireBrut = salaireBase + revalorisationSegur + indemniteSujetionSpeciale + majoDimanche + indemnitePrecarite + indemniteCongesPayes;
-let salaireNet = salaireBrut / 1.309;
+console.log(salaireNet.value);
 
-alert("Ton salaire sera de " +salaireNet+ " €")
+    });  
