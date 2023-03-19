@@ -11,11 +11,9 @@ let
     indemnitePrecarite = (salaireBase+indemniteSujetionSpeciale+238+majoDimanche)*10/100,
     indemniteCongesPayes = (salaireBase+indemniteSujetionSpeciale+238+majoDimanche+indemnitePrecarite) *10/100,
     salaireBrut = salaireBase + 238 + indemniteSujetionSpeciale + majoDimanche + indemnitePrecarite + indemniteCongesPayes,
-
+    
     salaireNet = document.querySelector('input[name="valeur_data"]');
 
-salaireNet.value = salaireBrut/ 1.309;
-
-console.log(salaireNet.value);
-
+salaireNet.value = Math.round((salaireBrut/ 1.309)*100)/100;
     });  
+
