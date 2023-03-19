@@ -1,0 +1,14 @@
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 100%;
+    margin: auto;
+};
+
+.entete {
+    display: flex;
+    flex-direction: row;
+}
+
+#logo {
+    width: 25%;
+}
