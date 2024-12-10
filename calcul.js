@@ -14,6 +14,6 @@ let
     
     salaireNet = document.querySelector('input[name="valeur_data"]');
 
-salaireNet.value = Math.round((salaireBrut/ 1.309)*100)/100;
+salaireNet.value = Math.round((salaireBrut/ 1.2844)*100)/100;
     });  
 
