@@ -3,8 +3,8 @@ document.getElementById("calcul").addEventListener('click', function() {
 let 
     nombreHeureTotale = document.getElementById("heureTotale").value,
     nombreHeureDimanche = document.getElementById("heureDimanche").value,
-    salaireDeBaseMensualise =  11.27 * 151.67,
-    absencePourEntreeSortie = (151.67-(nombreHeureTotale)) * 12.8400,
+    salaireDeBaseMensualise =  11.65 * 151.67,
+    absencePourEntreeSortie = (151.67-(nombreHeureTotale)) * 13.2192,
     salaireBase = salaireDeBaseMensualise - absencePourEntreeSortie,
     indemniteSujetionSpeciale =(nombreHeureTotale*10.80545)*0.0921,
     majoDimanche = nombreHeureDimanche * 7.86,
